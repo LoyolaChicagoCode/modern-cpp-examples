@@ -1,3 +1,8 @@
+#ifndef _POINT_H_
+#define _POINT_H_
+
+#include <utility>
+
 class Point {
 public:
     Point(double x = 0.0, double y = 0.0, double z = 0.0)
@@ -57,3 +62,5 @@ private:
 
     Coords coords;
 };
+
+#endif
