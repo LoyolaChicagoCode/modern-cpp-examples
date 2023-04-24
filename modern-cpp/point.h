@@ -1,6 +1,8 @@
 #ifndef POINT_H
 #define POINT_H
 
+#include <utility>
+
 class Point {
 public:
     Point(double x = 0.0, double y = 0.0, double z = 0.0)
