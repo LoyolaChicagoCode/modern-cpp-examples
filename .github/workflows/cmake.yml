@@ -33,3 +33,8 @@ jobs:
     - name: Run Tests
       run: echo "Tests coming soon."
 
+    - name: Test
+      # See George's systems-code-examples for how to run unit tests
+      # At the moment, these are all standalone programs
+      working-directory: ${{github.workspace}}/build
+      run: for exe in bin/*; echo "Running ./$exe"; do "./$exe"; done
