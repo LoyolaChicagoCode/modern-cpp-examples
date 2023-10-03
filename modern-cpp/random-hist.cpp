@@ -2,7 +2,6 @@
 // Created by George K. Thiruvathukal on 3/19/23.
 //
 
-
 // Use modern C++ to randomly generate a million floating point values in the range 0 to 1 and bucket them in 0.1 increments?
 
 #include <iostream>

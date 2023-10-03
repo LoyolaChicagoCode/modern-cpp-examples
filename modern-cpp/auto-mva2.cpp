@@ -24,7 +24,6 @@ std::string format_container(const Container& container) {
     return fmt::to_string(buffer);
 }
 
-
 int main() {
     auto i{42};
     auto d1{1.23}, d2{4.56};
