@@ -1,14 +1,15 @@
-
 #include <iostream>
 
 int main() {
     int a = 5;
     int b = 10;
 
-    auto sum = [=]() {
-        return a + b;
+    auto incrementBoth = [&]() {
+        a++;
+        b++;
     };
 
-    std::cout << "Sum"  << sum() << std::endl;
+    incrementBoth();
+    std::cout << "Increment Both " << "a = " << a << " b = " << b  << std::endl;
     return 0;
 }
