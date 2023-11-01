@@ -37,9 +37,9 @@ jobs:
       # See George's systems-code-examples for how to run unit tests
       # At the moment, these are all standalone programs
       working-directory: ${{github.workspace}}/build
-      run: >
-        - ln -s ../data
-        - for exe in bin/*; do
-            echo "Running ./$exe"
-            "./$exe"
-          done
+      run: |
+        ln -s ../data
+        for exe in bin/*; do
+           echo "Running ./$exe"
+           "./$exe"
+        done
