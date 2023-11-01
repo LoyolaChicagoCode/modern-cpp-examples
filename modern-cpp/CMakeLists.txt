@@ -3,7 +3,8 @@ function(add_my_executable target_name)
     target_link_libraries(${target_name} fmt::fmt spdlog::spdlog CLI11::CLI11)
 endfunction()
 
-set(MY_APP_NAMES cli11-mva
+set(MY_APP_NAMES 
+  cli11-mva
   auto-mva
   auto-with-stl
   mc-triangle
@@ -26,3 +27,10 @@ set(MY_APP_NAMES cli11-mva
 foreach(APP_NAME IN LISTS MY_APP_NAMES)
     add_my_executable(${APP_NAME})
 endforeach()
+
+enable_testing()
+
+add_executable(rangev3-aoc2022day1 rangev3-aoc2022day1.cpp)
+target_link_libraries(rangev3-aoc2022day1 range-v3 gtest_main)
+include(GoogleTest)
+gtest_discover_tests(rangev3-aoc2022day1)

@@ -46,6 +46,13 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(cli11)
 
 FetchContent_Declare(
+        Range-v3
+        GIT_REPOSITORY "https://github.com/ericniebler/range-v3"
+        GIT_TAG "0.12.0"
+)
+FetchContent_MakeAvailable(Range-v3)
+
+FetchContent_Declare(
         googletest
         GIT_REPOSITORY https://github.com/google/googletest.git
         GIT_TAG        release-1.11.0
