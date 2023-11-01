@@ -38,6 +38,7 @@ jobs:
       # At the moment, these are all standalone programs
       working-directory: ${{github.workspace}}/build
       run: >
+        ln -s ../data
         for exe in bin/*; do
            echo "Running ./$exe"
            "./$exe"
