@@ -109,3 +109,4 @@ cmake-build-*
 
 processtree-*
 \#*
+.vscode/
