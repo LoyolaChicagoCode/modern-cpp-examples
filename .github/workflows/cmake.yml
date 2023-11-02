@@ -40,5 +40,5 @@ jobs:
       run: >
         for exe in bin/*; do
            echo "Running ./$exe"
-           "./$exe"
+           "./$exe" < /dev/null
         done
