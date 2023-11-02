@@ -5,24 +5,18 @@
 #include <vector>
 
 #include <range/v3/view.hpp>
-#include <range/v3/algorithm.hpp>
-#include <range/v3/iterator.hpp>
-#include <range/v3/numeric.hpp>
-#include <range/v3/action.hpp>
 
 using namespace ranges;
 
 // to use, redirect stdin from data/day1input.txt
 int main() {
   // read lines into vector
-  std::vector<int> data;
-  copy(
-    getlines(std::cin) 
+  auto data = getlines(std::cin) 
     | views::transform(
         [](auto const& s) { return s.empty() ? 0 : std::stoi(s); }
-      ),
-    back_inserter(data)
-  );
+      )
+    | to_vector
+    ;
 
   copy(data, std::ostream_iterator<int>(std::cout, " "));
   std::cout << std::endl;
