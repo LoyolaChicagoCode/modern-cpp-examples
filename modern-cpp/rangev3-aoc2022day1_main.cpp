@@ -9,7 +9,7 @@ using namespace ranges;
 
 // to use, redirect stdin from data/day1input.txt
 int main() {
-  // read lines into vector
+  // read lines into vector<int> converting blank lines to zeroes
   auto data = getlines(std::cin) 
     | views::transform([](auto const& s) { return s.empty() ? 0 : std::stoi(s); })
     | to_vector

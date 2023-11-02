@@ -10,7 +10,7 @@
 using namespace ranges;
 
 std::pair<int, int> most_nutritious_inventories(std::vector<int> const& data, const int n) {
-  // divide into chunks separated by blank lines converted to zeroes
+  // divide into chunks separated by one or more zeroes
   // then add up each chunk's calories
   auto inventories = data 
     | views::chunk_by([](auto const l, auto const r) { return (l == 0) == (r == 0); })
