@@ -21,5 +21,5 @@ TEST(AOC2022Day1, Example) {
   };
   std::pair result{24000, 45000};
 
-  EXPECT_EQ(most_nutritious_inventories(data), result);
+  EXPECT_EQ(most_nutritious_inventories(data, 3), result);
 }

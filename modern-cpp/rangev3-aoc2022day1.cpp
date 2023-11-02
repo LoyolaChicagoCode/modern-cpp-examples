@@ -12,7 +12,7 @@
 
 using namespace ranges;
 
-std::pair<int, int> most_nutritious_inventories(std::vector<int> data) {
+std::pair<int, int> most_nutritious_inventories(std::vector<int> data, const int n) {
   auto has_no_zeroes = [](auto const& xs) {
     return none_of(xs, [](auto const x) { return x == 0; });
   };
@@ -27,7 +27,6 @@ std::pair<int, int> most_nutritious_inventories(std::vector<int> data) {
     ;
   make_heap(inventories);
 
-  auto constexpr n = 3;
   if (inventories.size() < n) return std::make_pair(-1, -1);
 
   std::vector<int> top_n;

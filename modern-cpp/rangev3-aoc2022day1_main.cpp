@@ -27,7 +27,7 @@ int main() {
   copy(data, std::ostream_iterator<int>(std::cout, " "));
   std::cout << std::endl;
 
-  auto result = most_nutritious_inventories(data);
+  auto result = most_nutritious_inventories(data, 3);
 
   std::cout << "Day 1 part 1 (max) = " << result.first << "\n";
   std::cout << "Day 1 part 2 (sum) = " << result.second << "\n";
