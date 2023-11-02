@@ -28,8 +28,8 @@ foreach(APP_NAME IN LISTS MY_APP_NAMES)
     add_my_executable(${APP_NAME})
 endforeach()
 
-# add_executable(rangev3-aoc2022day1 rangev3-aoc2022day1.cpp)
-# target_link_libraries(rangev3-aoc2022day1 range-v3 gtest_main)
+add_executable(rangev3-aoc2022day1_main rangev3-aoc2022day1_main.cpp rangev3-aoc2022day1.cpp)
+target_link_libraries(rangev3-aoc2022day1_main range-v3)
 
 enable_testing()
 
