@@ -2,7 +2,6 @@
 
 #include <iostream>
 #include <utility>
-#include <vector>
 
 #include <range/v3/view.hpp>
 
