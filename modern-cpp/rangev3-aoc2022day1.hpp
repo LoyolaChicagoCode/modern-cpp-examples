@@ -4,6 +4,6 @@
 #include <utility>
 #include <vector>
 
-std::pair<int, int> most_nutritious_inventories(std::vector<int> data, int n);
+std::pair<int, int> most_nutritious_inventories(const std::vector<int>& data, int n);
 
 #endif // RANGEV3_AOC2022DAY1_H
