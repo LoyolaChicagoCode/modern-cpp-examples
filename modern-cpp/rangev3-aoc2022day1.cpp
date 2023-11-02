@@ -22,7 +22,7 @@ std::pair<int, int> most_nutritious_inventories(std::vector<int> const& data, co
   // return error value if there are fewer than n inventories
   if (size(inventories) < n) return std::make_pair(-1, -1);
 
-  // sort just enough to obtain largest n inventories
+  // sort just enough in descending order to obtain largest n inventories
   nth_element(inventories, begin(inventories) + n, std::greater<int>());
 
   // return top and sum of top n inventory values
