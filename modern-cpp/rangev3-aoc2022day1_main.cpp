@@ -11,14 +11,11 @@ using namespace ranges;
 int main() {
   // read lines into vector
   auto data = getlines(std::cin) 
-    | views::transform(
-        [](auto const& s) { return s.empty() ? 0 : std::stoi(s); }
-      )
+    | views::transform([](auto const& s) { return s.empty() ? 0 : std::stoi(s); })
     | to_vector
     ;
 
-  copy(data, std::ostream_iterator<int>(std::cout, " "));
-  std::cout << std::endl;
+  std::cout << views::all(data) << std::endl;
 
   auto result = most_nutritious_inventories(data, 3);
 
