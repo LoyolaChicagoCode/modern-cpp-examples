@@ -22,6 +22,8 @@ set(MY_APP_NAMES
   lambda-with-closures-byval
   lambda-with-closures-byval-all
   lambda-with-return-type
+  std-pair
+  std-tuple
 )
   
 foreach(APP_NAME IN LISTS MY_APP_NAMES)
