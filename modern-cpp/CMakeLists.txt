@@ -24,6 +24,8 @@ set(MY_APP_NAMES
   lambda-with-return-type
   std-pair
   std-tuple
+  spdlog-mva
+  vector-top10-mva
 )
   
 foreach(APP_NAME IN LISTS MY_APP_NAMES)
